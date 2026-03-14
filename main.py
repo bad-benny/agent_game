@@ -1,6 +1,16 @@
-def main():
-    print("Hello from agent-game!")
+import pygame
 
+pygame.init()
 
-if __name__ == "__main__":
-    main()
+pygame.display.set_caption('Agent Game')
+screen = pygame.display.set_mode((1080, 920))
+
+clock = pygame.time.Clock()
+
+running = True
+
+while running:
+    for event in pygame.event.get():
+
+        if event.type == pygame.QUIT:
+            pygame.quit()
