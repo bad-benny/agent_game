@@ -1,12 +1,13 @@
 import pygame
+from characterplayer import Character
 
 pygame.init()
 
 pygame.display.set_caption('Agent Game')
 screen = pygame.display.set_mode((1080, 920))
-playersheet = pygame.image.load("player.png").convert_alpha()
-
 clock = pygame.time.Clock()
+player = Character()
+
 
 running = True
 
@@ -16,7 +17,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-
+    playerdraw = Character.drawchar(player, screen, 50, 50)
 
 
     pygame.display.update()
