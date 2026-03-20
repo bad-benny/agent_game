@@ -4,6 +4,7 @@ pygame.init()
 
 pygame.display.set_caption('Agent Game')
 screen = pygame.display.set_mode((1080, 920))
+playersheet = pygame.image.load("player.png").convert_alpha()
 
 clock = pygame.time.Clock()
 
