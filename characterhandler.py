@@ -4,10 +4,13 @@ class Character():
     def __init__(self):
         pass
     
-    def drawchar(self, screen, x, y,):
-        pygame.draw.rect(screen, (0, 0, 255), (x, y, 50, 50))
+    def drawplayer(self, screen, x, y, color):
+        pygame.draw.rect(screen, color, (x, y, 50, 50))
+
+    def drawnpc(self, screen, x, y, color):
+        pygame.draw.rect(screen, color, (x, y, 50, 50))    
     
-    def movechar(self, key, x, y, speed):
+    def moveplayer(self, key, x, y, speed):
         if key[pygame.K_w] or key[pygame.K_UP]:
             y -= speed
         if key[pygame.K_s] or key[pygame.K_DOWN]:
