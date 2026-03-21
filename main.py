@@ -1,5 +1,6 @@
 import pygame
 from characterplayer import Character
+from characternpc import CharacterTwo
 
 pygame.init()
 
@@ -7,6 +8,7 @@ pygame.display.set_caption('Agent Game')
 screen = pygame.display.set_mode((1080, 920))
 clock = pygame.time.Clock()
 player = Character()
+npc = CharacterTwo()
 speed = 1
 
 x = 50
@@ -24,12 +26,13 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    x, y = Character.movechar(player, keys, x, y, speed)
+    x, y = player.movechar(keys, x, y, speed)
 
     
     screen.fill((0, 0, 0))
     
-    playerdraw = Character.drawchar(player, screen, x, y)
+    npc.drawchar(screen, 600, 400)
+    player.drawchar(screen, x, y)
 
     pygame.display.update()
 

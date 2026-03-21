@@ -5,7 +5,7 @@ class Character():
         pass
     
     def drawchar(self, screen, x, y,):
-        pygame.draw.rect(screen, (255, 0, 255), (x, y, 50, 50))
+        pygame.draw.rect(screen, (0, 0, 255), (x, y, 50, 50))
     
     def movechar(self, key, x, y, speed):
         if key[pygame.K_w] or key[pygame.K_UP]:
